@@ -19,15 +19,15 @@ public class RouterConfig {
     @Bean
     public RouterFunction<ServerResponse> highLevelRouter(){
         return RouterFunctions.route()
-                .path("router", this::serverResponseRouterFunction)
+                              .path("square", this::serverResponseRouterFunction)
                 .build();
     }
 
    // @Bean
     private RouterFunction<ServerResponse> serverResponseRouterFunction(){
         return RouterFunctions.route()
-                .GET("square/{input}", RequestPredicates.path("*/1?"), requestHandler::squareHandler)
-                .GET("square/{input}", req -> ServerResponse.badRequest().bodyValue("only 10-19 allowed"))
+                              .GET("/{input}", RequestPredicates.path("/1?"), requestHandler::squareHandler)
+                .GET("{input}", req -> ServerResponse.badRequest().bodyValue("only 10-19 allowed"))
                 .GET("table/{input}", requestHandler::tableHandler)
                 .GET("table/{input}/stream", requestHandler::tableStreamHandler)
                 .POST("multiply", requestHandler::multiplyHandler)

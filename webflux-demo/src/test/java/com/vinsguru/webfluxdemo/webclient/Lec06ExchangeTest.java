@@ -32,7 +32,7 @@ public class Lec06ExchangeTest extends BaseTest {
     }
 
     private Mono<Object> exchange(ClientResponse cr){
-        if(cr.rawStatusCode() == 400)
+        if(cr.statusCode().is4xxClientError())
             return cr.bodyToMono(InputFailedValidationResponse.class);
         else
             return cr.bodyToMono(Response.class);
