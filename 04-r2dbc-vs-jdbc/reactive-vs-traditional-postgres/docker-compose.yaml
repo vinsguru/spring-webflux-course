@@ -1,0 +1,14 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=customer
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./customer.sql:/docker-entrypoint-initdb.d/customer.sql
+    ports:
+      - 5432:5432

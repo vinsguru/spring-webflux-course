@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <title>Trading Platform</title>
+</head>
+<body>
+
+<div class="jumbotron text-center mt-3">
+    <h1>Trading Platform</h1>
+</div>
+
+<div class="container-lg">
+
+    <div class="row mt-3">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>APPLE</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="APPLE">$100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('APPLE', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('APPLE', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>AMAZON</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="AMAZON">$100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('AMAZON', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('AMAZON', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>GOOGLE</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="GOOGLE">$100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('GOOGLE', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('GOOGLE', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>MICROSOFT</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="MICROSOFT">$100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('MICROSOFT', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('MICROSOFT', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row mt-3">
+
+        <div class="col-sm-3">
+
+            <div class="card w-100">
+                <div class="card-header">
+                    Profile
+                </div>
+                <div class="card-body">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QBWRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAITAAMAAAABAAEAAAAAAAAAAAEsAAAAAQAAASwAAAAB/+0ALFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAPHAFaAAMbJUccAQAAAgAEAP/hDIFodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0nYWRvYmU6bnM6bWV0YS8nIHg6eG1wdGs9J0ltYWdlOjpFeGlmVG9vbCAxMC4xMCc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp0aWZmPSdodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyc+CiAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICA8dGlmZjpYUmVzb2x1dGlvbj4zMDAvMTwvdGlmZjpYUmVzb2x1dGlvbj4KICA8dGlmZjpZUmVzb2x1dGlvbj4zMDAvMTwvdGlmZjpZUmVzb2x1dGlvbj4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wTU09J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8nPgogIDx4bXBNTTpEb2N1bWVudElEPmFkb2JlOmRvY2lkOnN0b2NrOmQ2MjBlN2M3LTkxMjctNDFkYy05YTYxLWIyZTAxYTIwOTUxMjwveG1wTU06RG9jdW1lbnRJRD4KICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOjdmZmZhYTllLTUzMjYtNDA0MS05YjU3LTQwYWZlNDgxZGJkMjwveG1wTU06SW5zdGFuY2VJRD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgBaAFoAwERAAIRAQMRAf/EAB0AAQADAQADAQEAAAAAAAAAAAAGBwgJAgMFAQT/xABBEAEAAQMDAQQGBgcHBAMAAAAAAQIDBAUGEQcSIUFRCBMYIjFhMlZxgZTRCRRCYoKRkkNS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" class="card-img-top" alt="...">
+                    <h5 class="card-title" id="customer-profile-name">.</h5>
+                    <div class="row mt-3">
+                        <div class="col" style="width: 60%; flex:none">
+                            <strong>Available Balance</strong>
+                        </div>
+                        <div class="col" style="width: 40%;" id="customer-available-balance">
+                            $0
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col" style="width: 60%; flex:none">
+                            <strong>Portfolio Value</strong>
+                        </div>
+                        <div class="col " style="width: 40%;" id="customer-portfolio-value">
+                            $0
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div class="card w-100">
+                <div class="card-header">
+                    Portfolio
+                </div>
+                <div class="card-body">
+
+                    <table class="table" id="customer-portfolio">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Current Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="alerts" class="mt-3">
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+        // get customer id
+        const params = new URLSearchParams(window.location.search);
+        const customerId = params.get('customer');
+        let stockPrices = {};
+        let customerPortfolioValue = {};
+        console.log(customerId);
+
+        // elements
+        const customerProfileNameElement = document.getElementById('customer-profile-name');
+        const customerPortfolioValueElement = document.getElementById('customer-portfolio-value');
+        const customerAvailableBalanceElement = document.getElementById('customer-available-balance');
+        const customerPortfolioContainer = document.getElementById('customer-portfolio').querySelector('tbody');
+        const alerts = document.getElementById('alerts');
+
+        // get price updates
+        const stockPriceUpdates = () => {
+            var source = new EventSource("/stock/price-stream");
+            source.onmessage = (evt) => {
+                let event = JSON.parse(evt.data);
+                let element = document.getElementById(event.ticker);
+                element.innerText = `$${event.price}`;
+                stockPrices[event.ticker] = event.price;
+                let customerQuantity = document.getElementById(`customer-quantity-${event.ticker}`);
+                if(customerQuantity){
+                    let q = parseInt(customerQuantity.innerText);
+                    let price = q * event.price;
+                    document.getElementById(`customer-value-${event.ticker}`).innerText = `$${price}`;
+                    customerPortfolioValue[event.ticker] = price;
+                    updateCustomerPortfolioDisplayValue();
+                }
+            };
+        };
+
+        // get customer information & portfolio
+        const fetchCustomerInformation = async () => {
+            const response = await fetch(`/customers/${customerId}`);
+            const customer = await response.json();
+            customerProfileNameElement.innerText = customer.name;
+            customerAvailableBalanceElement.innerText = `$${customer.balance}`;
+            while(customerPortfolioContainer.firstChild){
+                customerPortfolioContainer.removeChild(customerPortfolioContainer.firstChild);
+            }
+            customer.holdings.map((holding, index) => getPortfolioRow(holding, index)).forEach((holding) => customerPortfolioContainer.append(holding));
+            customer.holdings.forEach(holding => customerPortfolioValue[holding.ticker] = (holding.quantity * getStockPriceFromCache(holding.ticker)));
+            customerPortfolioValue['BALANCE'] = customer.balance;
+            console.log(customerPortfolioValue);
+            updateCustomerPortfolioDisplayValue();
+        }
+
+        const updateCustomerPortfolioDisplayValue = () => {
+            const sum = Object.values(customerPortfolioValue).reduce((acc, val) => acc + val, 0);
+            if(sum >= 10000){
+                customerPortfolioValueElement.innerHTML = `<p class="text-success">$${sum}</p>`;
+            }else{
+                customerPortfolioValueElement.innerHTML = `<p class="text-danger">$${sum}</p>`;
+            }
+        };
+
+        const getPortfolioRow = (holding, index) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                            <th scope="row">${index + 1}</th>
+                            <td>${holding.ticker}</td>
+                            <td id="customer-quantity-${holding.ticker}">${holding.quantity}</td>
+                            <td id="customer-value-${holding.ticker}">$${holding.quantity * getStockPriceFromCache(holding.ticker) }</td>
+            `;
+            return tr;
+        }
+
+        const getStockPriceFromCache = (ticker) => {
+            return stockPrices[ticker] ? stockPrices[ticker] : 0;
+        }
+
+        const trade = async (ticker, action) => {
+            const response = await fetch(`/customers/${customerId}/trade`, {
+                    method : "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ticker,
+                        action,
+                        quantity: 1
+                    })
+            });
+            const data = await response.json();
+            if(response.ok){
+                // we might need updated customer balance & portfolio
+                fetchCustomerInformation();
+            }else{
+                showAlert(data.detail, 'danger');
+            }
+
+        };
+
+        const showAlert = (msg, level) => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <div class="alert alert-${level} alert-dismissible" role="alert">
+                    ${msg}
+                </div>
+            `;
+            alerts.append(div);
+            setTimeout(() => {
+                div.remove();
+            }, 3000);
+        };
+
+        // trigger these functions on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            stockPriceUpdates();
+            fetchCustomerInformation();
+        });
+
+
+
+    </script>
+
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
