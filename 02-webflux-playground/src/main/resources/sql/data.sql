@@ -20,7 +20,7 @@ CREATE TABLE customer_order (
   product_id int,
   amount int,
   order_date TIMESTAMP WITH TIME ZONE default CURRENT_TIMESTAMP,
-  foreign key (customer_id) references customer(id),
+  foreign key (customer_id) references customer(id) on delete cascade,
   foreign key (product_id) references product(id)
 );
 
